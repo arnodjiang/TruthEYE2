@@ -1,2 +1,3 @@
 datas/
 .env
+*__pycache__/*
