@@ -123,7 +123,7 @@ class BaseTool(ABC):
                     'The parameters, when provided as a dict, must confirm to a valid openai-compatible JSON schema.')
 
     @abstractmethod
-    def call(self, params: Union[str, dict], **kwargs) -> Union[str, list, dict, List[ContentItem]]:
+    def call(self, params: Union[str, dict], **kwargs) -> Union[str, list, dict, list]:
         """The interface for calling tools.
 
         Each tool needs to implement this function, which is the workflow of the tool.
@@ -170,6 +170,18 @@ class BaseTool(ABC):
             'parameters': self.parameters,
             # 'args_format': self.args_format
         }
+    
+    @property
+    def get_swift_description(self) -> str:
+        
+        return json.dumps({
+            "type": "function",
+            "function": {
+                "name": self.name,
+                "description": self.description,
+                "parameters": self.parameters
+            }
+        },ensure_ascii=False)
 
     @property
     def name_for_human(self) -> str:
