@@ -2,7 +2,9 @@
 
 > TruthEYE2 is an agentic multimodal large language model (MLLM) framework for unified synthetic image forensics, supporting image-level authenticity detection, fine-grained forgery localization, and interpretable reasoning in an end-to-end manner. Unlike prior tool-based approaches that rely on a fixed and predefined tool registry, TruthEYE2 adopts Programmatic Visual Reasoning (PVR): the model directly generates executable image-operation code (e.g., rotation, cropping) during reasoning, enabling flexible, compositional, and scalable visual forensics.
 
-> This repository provides the implementation of TruthEYE2, including training pipelines, inference code, and the TruthEYETool-50K dataset introduced in our paper.
+> This anonymous repository provides the implementation of TruthEYE2, including training pipelines, inference code, and the TruthEYETool-50K dataset introduced in our paper.
+
+
 
 ## Training Pipeline
 
@@ -147,9 +149,11 @@ swift rlhf \
 
 ## Evaluation
 
-cd scripts
+<!-- cd scripts -->
 
 ```bash
+cd ./scripts
+
 python trutheye2.py \
   --root "img20.jsonl" \
   --to_path "img20-trutheye2.jsonl" \
