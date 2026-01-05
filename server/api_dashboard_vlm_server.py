@@ -131,7 +131,7 @@ class APIDashBoardVLMServer(LLMServerABC):
         return
     
     def __init__(self, 
-                 api_url: str = "https://dashscope.aliyuncs.com/api/v1",
+                 api_url: str = "",
                  api_key: str = "DASHBOARD_API_KEY",
                  model_name: str = "qwen3-vl-plus",
                  max_workers: int = 3,

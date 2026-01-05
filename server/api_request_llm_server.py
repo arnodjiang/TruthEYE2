@@ -16,8 +16,8 @@ class APIREQUESTLLMServer(LLMServerABC):
         return
     
     def __init__(self, 
-                 api_url: str = "https://api.openai.com/v1/chat/completions",
-                 api_key: str = "OPENAI_API_KEY",
+                 api_url: str = "",
+                 api_key: str = "",
                  model_name: str = "gpt-4o",
                  max_workers: int = 10,
                  max_retries: int = 5,
