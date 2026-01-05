@@ -74,7 +74,7 @@ swift rlhf \
     --train_type full \
     --sleep_level 1 \
     --torch_dtype bfloat16 \
-    --dataset "./rl_train.jsonl" \
+    --dataset "./rl_train_stage2.jsonl" \
     --load_from_cache_file true \
     --max_completion_length 2048 \
     --soft_cache_length 1024 \
@@ -156,6 +156,16 @@ swift rlhf \
     --response_prefix "<think>"
 ```
 
+## Evaluation
+
+cd scripts
+
+```bash
+python trutheye2.py \
+  --root "img20.jsonl" \
+  --to_path "img20-trutheye2.jsonl" \
+  --model_path "/trutheye2"
+```
 
 Ethical Considerations
 - All data used are sourced from publicly available datasets for research purposes
