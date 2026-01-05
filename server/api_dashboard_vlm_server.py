@@ -278,7 +278,7 @@ if __name__=="__main__":
             }
         }
     }]
-    img_path="/public/data_share/model_hub/lab10_data/trutheye2/datas/sft/miml_part1/0/original.jpg"
+    img_path="./miml_part2/0/original.jpg"
     messages = [
         {
             "role": "system",
