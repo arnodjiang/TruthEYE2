@@ -1,1 +1,6 @@
-dotenv
+ms-swift
+loguru
+json5
+json_repair
+qwen-agent
+transformers>=4.36.0
